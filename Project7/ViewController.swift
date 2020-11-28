@@ -51,7 +51,8 @@ class ViewController: UITableViewController {
             guard let answer = ac?.textFields?[0].text else { return }
             self?.submit(answer)
         }
-
+        
+        ac.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
         ac.addAction(submitAction)
         present(ac, animated: true)
     }
